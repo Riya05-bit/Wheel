@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wheel{
+    position: absolute;
+    top: 1vw;
+    left: 30vw;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    border: 2px solid;
+    background: linear-gradient(blue,cyan,teal,blue);
+    cursor: pointer;
+    animation: Spinwheel 2s linear infinite;
+}
+@keyframes Spinwheel{
+0%{
+    transform: rotate(360deg);
+}
+}
+
+#wheel span{
+    position: absolute;
+    background: #000;
+    height: 100%;
+    width: .5vw;
+    left:19.5vw;
+    transform: rotate(calc(45deg*var(--i)));
+}
